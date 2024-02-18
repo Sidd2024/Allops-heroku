@@ -16,6 +16,7 @@ urlpatterns = [
     path('share',views.share,name="share"),
     path('profile',views.profile,name="profile"),
     path('mails',views.activate_mails,name="mails"),
-    path('validate',views.validate_mail,name="validate")
+    path('validate',views.validate_mail,name="validate"),
+    path('subscribe',views.subscribe,name="subscribe")
 
 ]

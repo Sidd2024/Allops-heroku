@@ -367,7 +367,7 @@ def activate_mails(request):
             "subscribed": subscribed
         })
     
-    @login_required
+@login_required
 def validate_mail(request):
     
     if request.method == 'POST':
@@ -410,3 +410,6 @@ def validate_mail(request):
         return render(request, "Allops/validate.html",{
             "form": form
         })
+
+def subscribe(request):
+    return render(request,"Allops/subscribe.html")
