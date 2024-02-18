@@ -50,7 +50,7 @@ class opportunity(models.Model):
     link = models.URLField(blank=False)
     start = models.DateField(blank=False)
     end = models.DateField(blank=True)
-    interest = MultiSelectField(choices = my_fields)
+    interest = MultiSelectField(choices = my_fields, max_length=len(my_fields))
     location = models.CharField(max_length=64, default='virtual')
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="owner")
     time = models.DateTimeField(auto_now_add=True)
@@ -70,7 +70,7 @@ class save(models.Model):
 class mails(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="mail_user",blank=False)
     mail_id = models.EmailField(blank=False)
-    fields = MultiSelectField(choices=my_fields)
+    fields = MultiSelectField(choices=my_fields, max_length=len(my_fields))
     
     def __str__(self):
         return (f"{self.user}:  {self.mail_id}.")
