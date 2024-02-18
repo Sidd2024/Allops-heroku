@@ -1,3 +1,3 @@
-web: gunicorn capstone.wsgi:application --log-file - --log-level debug
+web: gunicorn capstone.wsgi:application --log-file -
 python manage.py collectstatic --noinput
-manage.py migrate
+python manage.py migrate
