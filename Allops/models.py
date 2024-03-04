@@ -40,7 +40,8 @@ my_types = (
 )
 
 class User(AbstractUser):
-    pass
+    def __str__(self):
+        return (f"{self.id}: {self.username}")
 
 class opportunity(models.Model):
     head = models.CharField(max_length=64)
