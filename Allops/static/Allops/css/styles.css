@@ -230,6 +230,7 @@
 
 body {
   margin: 0;
+  overflow-x: hidden;
   font-family: var(--bs-body-font-family);
   font-weight: var(--bs-body-font-weight);
   line-height: var(--bs-body-line-height);
